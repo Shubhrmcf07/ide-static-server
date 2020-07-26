@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    <link 
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+    />
+    <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.css">
+</link>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.js">
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/mode/javascript/javascript.min.js">
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/mode/python/python.min.js">
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/mode/clike/clike.min.js">
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.55.0/addon/edit/closebrackets.min.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.55.0/addon/edit/matchbrackets.min.js"></script>
+  <link rel="stylesheet" href="./css/style.css" />
+     <!-- <script type="module" src="https://cdn.jsdelivr.net/gh/vanillawc/wc-monaco-editor@1/index.js"></script> -->
+    <title>Personal IDE</title>
+  </head>
+  <body>
+    <header>
+      <h2>Personal IDE</h2>
+      <div id="run">
+        <div id="select-icon">
+          <select name="language" id="language">
+            <option value="cpp"> C++</option>
+            <option value="python">Python</option>
+            <option value="c">C</option>
+          </select>
+          <i class="fa fa-code" aria-hidden="true"></i>
+        </div>
+        <button type="button" id="mybutton">
+          <i class="fa fa-play" aria-hidden="true"></i> <strong>Run</strong>
+        </button>
+      </div>
+    </header>
+    <div id="container"></div>
+
+    <textarea
+      name="input"
+      id="input"
+      cols="30"
+      rows="10"
+      placeholder="Enter Input"
+    ></textarea>
+    <textarea name="output" id="soln" cols="30" rows="10" readonly></textarea>
+
+<!-- <script src="monaco-editor/min/vs/loader.js"></script> -->
+    <script type="text/javascript" src="/js/scripts.js"></script>
+  </body>
+</html>
