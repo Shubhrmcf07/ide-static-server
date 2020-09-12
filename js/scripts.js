@@ -61,8 +61,7 @@ form.addEventListener("click", (e) => {
   var code = xe.getValue();
   var language = document.getElementById("language").value;
   var input = document.getElementById("input").value;
-  const url =
-    "http://ec2-15-207-249-131.ap-south-1.compute.amazonaws.com/compile";
+  const url = "http://localhost:8080/compile";
   return fetch(url, {
     method: "POST",
     body: JSON.stringify({
