@@ -1,8 +1,8 @@
-var value;
-var mode;
-var xe;
+let value;
+let mode;
+let xe;
 
-var q = document.getElementById("language").value;
+let q = document.getElementById("language").value;
 if (q == "c") {
   value =
     '#include<stdio.h>\nint main(){\nprintf("Hello World");\nreturn 0;\n}';
@@ -30,9 +30,9 @@ xe = CodeMirror(document.querySelector("#container"), {
 });
 
 xe.setSize("100%", "100%");
-var lang = document.getElementById("language");
+let lang = document.getElementById("language");
 lang.addEventListener("change", (e) => {
-  var k = e.target.value;
+  let k = e.target.value;
   if (k == "cpp") {
     xe.setOption(
       "value",
@@ -55,12 +55,12 @@ lang.addEventListener("change", (e) => {
   }
 });
 
-var form = document.getElementById("mybutton");
+let form = document.getElementById("mybutton");
 form.addEventListener("click", (e) => {
   e.preventDefault();
-  var code = xe.getValue();
-  var language = document.getElementById("language").value;
-  var input = document.getElementById("input").value;
+  let code = xe.getValue();
+  let language = document.getElementById("language").value;
+  let input = document.getElementById("input").value;
   const url = "http://localhost:8080/compile";
   return fetch(url, {
     method: "POST",
